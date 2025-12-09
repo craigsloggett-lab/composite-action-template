@@ -13,7 +13,8 @@ permissions:
 jobs:
   release:
     name: GitHub
-    if: github.repository == 'craigsloggett-lab/composite-action-template' # Prevent an initial run.
+    # Prevent an initial run on repository creation using this template.
+    if: github.repository == 'craigsloggett-lab/composite-action-template'
     runs-on: ubuntu-24.04
 
     outputs:

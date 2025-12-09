@@ -6,7 +6,25 @@ A GitHub repository template for creating a new Composite Action.
 
 ## Usage
 
-See [action.yml](action.yml) for the various `inputs` this action supports.
+```yaml
+name: Lint
+
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Use Composite Action
+        uses: craigsloggett-lab/my-composite-action@v1
+```
 
 ### Inputs
 
