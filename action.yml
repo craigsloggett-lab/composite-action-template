@@ -20,5 +20,6 @@ runs:
       id: workflow-step
       run: |-
         printf 'my-output=%s\n' "${MY_INPUT}" >> "${GITHUB_OUTPUT}"
+      shell: sh
       env:
         MY_INPUT: inputs.my-input
